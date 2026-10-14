@@ -1,8 +1,8 @@
 import { Router } from "express";
 import exerciseController from "../controllers/exercises.ts";
 
-const userRouter = Router();
+const exerciseRouter = Router();
 
-userRouter.get("/", exerciseController.index);
+exerciseRouter.get("/", exerciseController.index);
 
-export default userRouter;
+export default exerciseRouter;
