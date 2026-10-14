@@ -1,4 +1,4 @@
-import Exercise from '../models/Exercise.js';
+import Exercise from '../models/Exercise.ts';
 import { Request, Response } from 'express';
 
 async function index(req: Request, res: Response) {

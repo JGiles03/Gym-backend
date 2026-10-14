@@ -1,9 +1,9 @@
 import "dotenv/config"
 
 import fs from "fs"
-import db from "./connect.js"
+import db from "./connect.ts"
 
-const database = fs.readFileSync("./db/database.sql").toString();
+const database = fs.readFileSync("./src/db/data.sql").toString();
 
 
 db.query(database).then((data)=>{

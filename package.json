@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup-db": "node ./db/setup.js",
-    "dev": "nodemon -L index.js",
-    "start": "node index.js"
+    "setup-db": "node ./src/db/setup.ts",
+    "dev": "nodemon -L ./src/index.ts",
+    "start": "node ./src/index.ts"
   },
   "keywords": [],
   "author": "",

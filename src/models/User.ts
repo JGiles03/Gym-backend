@@ -1,4 +1,4 @@
-import db from "../db/connect.js";
+import db from "../db/connect.ts";
 
 type UserParams = {
     user_id: number,

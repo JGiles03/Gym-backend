@@ -1,5 +1,5 @@
-import User from "../models/User.js"
-import { Request, Response } from 'express';
+import User from "../models/User.ts"
+import type { Request, Response } from 'express';
 
 async function index(req: Request, res: Response) {
     try{
