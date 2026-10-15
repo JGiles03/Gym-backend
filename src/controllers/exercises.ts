@@ -10,4 +10,14 @@ async function index(req: Request, res: Response) {
     }
 }
 
-export default { index };
+async function getById(req: Request, res: Response) {
+    try{
+        const id = Number(req.params.id)
+        const exercise = await Exercise.getById(id);
+        res.status(200).send(exercise);
+    } catch(err: any){
+        res.status(500).send({error: err.message})
+    }
+}
+
+export default { index, getById };

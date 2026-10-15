@@ -33,6 +33,17 @@ class Exercise {
     }
     return response.rows.map((c) => new Exercise(c));
     }
+
+    static async getById(id: number) {
+        try {
+            const response = await db.query("SELECT * FROM exercises WHERE id = ($1);", [id]);
+            const exercise = new Exercise(response.rows[0]);
+            return exercise;
+        } catch(err) {
+            throw new Error("This exercise doesn't exist");
+        }
+    }
+
     
 }
 
