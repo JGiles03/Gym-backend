@@ -36,7 +36,7 @@ class Exercise {
 
     static async getById(id: number) {
         try {
-            const response = await db.query("SELECT * FROM exercises WHERE id = ($1);", [id]);
+            const response = await db.query("SELECT * FROM exercises WHERE exercise_id = ($1);", [id]);
             const exercise = new Exercise(response.rows[0]);
             return exercise;
         } catch(err) {
